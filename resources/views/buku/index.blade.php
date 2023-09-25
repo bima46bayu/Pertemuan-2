@@ -27,5 +27,12 @@
             @endforeach
         </tbody>
     </table>
+    <p align="right"><a href="{{route('buku.create')}}">Tambah Buku</a></p>
+    <td>
+        <form action="{{route('buku.destroy', $buku->id)}}" method="post">
+            @csrf 
+            <button onClick="return confirm('Yakin mau dihapus')">Hapus</button>
+        </form>
+    </td>
 </body>
 </html>

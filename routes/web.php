@@ -26,3 +26,6 @@ Route::get('/', function () {
 // });
 Route::get('/buku', [BukuController::class, 'index']);
 // Route::get("/about",[Controller::class, "index"]);
+Route::get('/buku/create', [BukuController::class, 'create'])->name('buku.create');
+Route::post('/buku', [BukuController::class, 'store'])->name('buku.store');
+Route::post('/buku/delete/id', [BukuController::class, 'destroy'])->name('buku.destroy');
